@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:payment_integration/features/payment/presentation/widgets/total_price_widget.dart';
+import '../../../../core/widgets/custom_button.dart';
 import 'custom_cart_order_info.dart';
 
 class MyCartViewBody extends StatelessWidget {
@@ -39,6 +39,16 @@ class MyCartViewBody extends StatelessWidget {
           const TotalPrice(
             title: 'Total',
             value: r'$50.97',
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          CustomButton(
+            onTap: () {},
+            buttonTitle: 'Complete Payment',
+          ),
+          const SizedBox(
+            height: 12,
           ),
         ],
       ),
