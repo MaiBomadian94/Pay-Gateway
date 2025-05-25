@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:payment_integration/features/payment/presentation/widgets/total_price_widget.dart';
-import '../../../../core/utlis/styles.dart';
 import 'custom_cart_order_info.dart';
 
 class MyCartViewBody extends StatelessWidget {
