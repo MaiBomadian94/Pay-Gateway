@@ -12,6 +12,9 @@ class MyCartViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
+          const SizedBox(
+            height: 25,
+          ),
           Image.asset('assets/images/Group 6.png'),
           const SizedBox(
             height: 25,
