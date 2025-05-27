@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-
 import '../../../../core/utlis/styles.dart';
 
 class TotalPrice extends StatelessWidget {
