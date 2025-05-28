@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ThankYouView extends StatelessWidget {
   const ThankYouView({super.key});
@@ -19,6 +20,7 @@ class ThankYouViewBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Stack(
+        clipBehavior: Clip.none,
         children: [
           Container(
             decoration: ShapeDecoration(
@@ -40,6 +42,19 @@ class ThankYouViewBody extends StatelessWidget {
             right: -20,
             child: const CircleAvatar(
               backgroundColor: Colors.white,
+            ),
+          ),
+           Positioned(
+            top: -20,
+            right: 0,
+            left: 0,
+            child: CircleAvatar(
+
+              backgroundColor: const Color(0xffD9D9D9),
+              child: CircleAvatar(
+                backgroundColor: const Color(0xff34A853),
+                child:SvgPicture.asset('assets/images/check.svg',fit: BoxFit.scaleDown,) ,
+              ),
             ),
           ),
         ],
