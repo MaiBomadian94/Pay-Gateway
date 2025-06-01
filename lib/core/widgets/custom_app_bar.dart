@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../utlis/styles.dart';
+import '../utils/styles.dart';
 
 AppBar buildAppBar({required String title,  void Function()? onTap}) {
   return AppBar(

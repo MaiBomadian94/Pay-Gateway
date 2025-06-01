@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-class PositionedDashRow extends StatelessWidget {
-  const PositionedDashRow({
+class PositionedDashLine extends StatelessWidget {
+  const PositionedDashLine({
     super.key,
   });
 
