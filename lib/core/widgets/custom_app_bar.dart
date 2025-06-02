@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../utils/styles.dart';
 
-AppBar buildAppBar({required String title,  void Function()? onTap}) {
+AppBar buildAppBar({ String? title,  void Function()? onTap}) {
   return AppBar(
     backgroundColor: Colors.transparent,
     centerTitle: true,
@@ -17,7 +17,7 @@ AppBar buildAppBar({required String title,  void Function()? onTap}) {
       ),
     ),
     title: Text(
-      title,
+      title??"",
       style: Styles.textStyle25,
       textAlign: TextAlign.center,
     ),
