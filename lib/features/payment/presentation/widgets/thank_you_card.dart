@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:payment_integration/features/payment/presentation/widgets/payment_item_info.dart';
 import 'package:payment_integration/features/payment/presentation/widgets/total_price_widget.dart';
 import '../../../../core/utils/styles.dart';
+import 'container_card_info.dart';
 
 class ThankYouCard extends StatelessWidget {
   const ThankYouCard({
@@ -18,7 +19,7 @@ class ThankYouCard extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.only(top: 66, left: 22, right: 22) ,
+        padding: const EdgeInsets.only(top: 66, left: 22, right: 22),
         child: Column(
           children: [
             const Text(
@@ -66,6 +67,10 @@ class ThankYouCard extends StatelessWidget {
               title: 'Total',
               value: r'$50.97',
             ),
+            const SizedBox(
+              height: 30,
+            ),
+            const ContainerCardInfo()
           ],
         ),
       ),
