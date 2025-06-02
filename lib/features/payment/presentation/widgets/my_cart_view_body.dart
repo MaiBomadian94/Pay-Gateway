@@ -1,6 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/utlis/styles.dart';
+import 'package:payment_integration/features/payment/presentation/widgets/total_price_widget.dart';
+import '../../../../core/widgets/custom_button.dart';
+import 'custom_cart_order_info.dart';
+import 'custom_payment_method_bottom_sheet.dart';
 
 class MyCartViewBody extends StatelessWidget {
   const MyCartViewBody({super.key});
@@ -11,75 +13,51 @@ class MyCartViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
-          Image.asset('assets/images/Group 6.png'),
           const SizedBox(
             height: 25,
           ),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Order Subtotal',
-                style: Styles.textStyle18,
-              ),
-              Text(
-                r'$42.97',
-                style: Styles.textStyle18,
-              ),
-            ],
+          Expanded(child: Image.asset('assets/images/Group 6.png')),
+          const SizedBox(
+            height: 25,
+          ),
+          const CustomOrderInfo(
+            title: 'Order Subtotal',
+            value: r'$42.97',
           ),
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 5),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Discount',
-                  style: Styles.textStyle18,
-                ),
-                Text(
-                  r'$$0',
-                  style: Styles.textStyle18,
-                ),
-              ],
+            child: CustomOrderInfo(
+              title: 'Discount',
+              value: r'$0',
             ),
           ),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Shipping',
-                style: Styles.textStyle18,
-              ),
-              Text(
-                r'$8',
-                style: Styles.textStyle18,
-              ),
-            ],
+          const CustomOrderInfo(
+            title: 'Shipping',
+            value: r'$8',
+          ),
+          const Divider(
+            height: 34,
+            thickness: 2,
+            color: Color(0xffC7C7C7),
+          ),
+          const TotalPrice(
+            title: 'Total',
+            value: r'$50.97',
           ),
           const SizedBox(
-            height: 17,
+            height: 16,
           ),
-          Container(
-            width: 320,
-            height: 2,
-            color: const Color(0xffC7C7C7),
+          CustomButton(
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (context) => const CustomPaymentMethodBottomSheet(),
+              );
+            },
+            buttonTitle: 'Complete Payment',
           ),
           const SizedBox(
-            height: 15,
-          ),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Total',
-                style: Styles.textStyle24,
-              ),
-              Text(
-                r'$50.97',
-                style: Styles.textStyle24,
-              ),
-            ],
+            height: 12,
           ),
         ],
       ),
