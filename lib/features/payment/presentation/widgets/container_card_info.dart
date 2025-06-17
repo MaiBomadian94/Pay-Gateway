@@ -34,8 +34,7 @@ class ContainerCardInfo extends StatelessWidget {
                   style: Styles.textStyle18.copyWith(
                       fontSize: 16,
                       color: Colors.black.withOpacity(0.699999988079)),
-                ),
-              ],
+                ),],
             ),
           )
         ],
